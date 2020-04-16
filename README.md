@@ -2,7 +2,7 @@
 
 <img src="figure/fig1.png" width = 60% height = 60%/>
 
-This repo contains the pytorch implementation for the CVPR 2020 paper [A Transductive Approach for Video Object Segmentation](https://arxiv.org/abs/2004.07193).
+This repo contains the pytorch implementation for the CVPR 2020 paper [A Transductive Approach for Video Object Segmentation](link-to-arxiv).
 
 ## Pretrained Models and Results
 
@@ -30,7 +30,7 @@ Our results on DAVIS17 and YouTube-VOS:
 - Clone this repo:
 
   ```shell
-  git clone https://github.com/microsoft/transductive-vos.pytorch
+  git clone https://github.com/path-to-released-repo
   ```
 
 - Prepare DAVIS 17 train-val dataset:
@@ -84,6 +84,12 @@ Our results on DAVIS17 and YouTube-VOS:
   ```
 
   Same as above, all the inference parameters are set to our best setting on DAVIS validation set as default, which is able to reproduce our result with a J-mean of 0.699. The saved predictions can be directly evaluated by [DAVIS evaluation code](https://github.com/davisvideochallenge/davis2017-evaluation).
+
+## Further Improvements
+This approach is simple with clean implementations, if you add few tiny tricks, the performance will be furhter improved. For exmaple,
+- If performing epoch test, i.e., selecting the best-performing epoch, you can further get ~1.5 points absolute performance improvements on DAVIS17 dataset.
+- Pretraining the model on other image datasets with mask annotation, such as semantic segmentation and salient object detection, may bring further improvements. 
+- ... ...
 
 ## Contact
 
